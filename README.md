@@ -1,16 +1,11 @@
-# i_travel
+I TRAVEL: Egypt
+Welcome to I TRAVEL: Egypt, your ultimate guide to exploring the wonders of Egypt! This app is designed to help travelers navigate and enjoy the rich history, vibrant culture, and stunning landscapes of this fascinating country.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Features:
+Comprehensive City Guides: Discover detailed information on key cities including Cairo, Luxor, Aswan, and Alexandria.
+Attractions and Landmarks: Get insights into must-see attractions like the Pyramids of Giza, the Sphinx, and the Nile River.
+Local Tips and Recommendations: Access curated recommendations for dining, shopping, and cultural experiences.
+Interactive Maps: Navigate with ease using interactive maps highlighting major tourist spots, restaurants, and hotels.
+Travel Itineraries: Plan your trip with suggested itineraries for various interests and durations.
+Cultural Insights: Learn about local customs, traditions, and practical travel tips to enrich your experience.
+I TRAVEL: Egypt is your personal guide to making the most of your Egyptian adventure. Download and start exploring today!

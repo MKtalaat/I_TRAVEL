@@ -68,4 +68,26 @@ class PlanRepositoryImplementation extends PlanRepository {
       return Left(ServerFailure(error.toString()));
     }
   }
+
+  @override
+  Future<Either<Failure, String>> deletePlan({
+    required String id,
+  }) async {
+    try {
+      await firebaseFirestore
+          .collection('Users')
+          .doc(AppConstants.userId)
+          .collection('Plan').doc(id).delete().then((value)async{
+        await databaseService.deleteRowFromDatabase(
+          tableName: DatabaseStrings.planTableName,
+          id: id,
+        );
+      });
+
+      return const Right('Deleted from the plan successfully');
+    } catch (error) {
+      return Left(ServerFailure(error.toString()));
+    }
+  }
+
 }

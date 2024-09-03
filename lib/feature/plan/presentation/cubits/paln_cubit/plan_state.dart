@@ -31,3 +31,17 @@ class GetPlanFailureState extends PlanState {
 
   GetPlanFailureState(this.error);
 }
+
+class DeletePlanLoadingState extends PlanState {}
+
+class DeletePlanSuccessState extends PlanState {
+  final String message;
+
+  DeletePlanSuccessState(this.message);
+}
+
+class DeletePlanFailureState extends PlanState {
+  final String error;
+
+  DeletePlanFailureState(this.error);
+}

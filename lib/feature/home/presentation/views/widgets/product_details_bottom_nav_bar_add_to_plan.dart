@@ -71,10 +71,7 @@ class ProductDetailBottomNavBarAddToPlan extends StatelessWidget {
                                   .selectedDateTimeLine
                                   .toString())),
                         ),
-                      )
-                          .then((value) {
-                        PlanCubit.get(context).getPlan();
-                      });
+                      );
                     }else{
                       showErrorSnackBar(
                           context: context,

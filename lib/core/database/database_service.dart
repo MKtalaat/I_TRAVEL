@@ -7,4 +7,8 @@ abstract class DatabaseService{
   Future<List<Map<String,dynamic>>> getTableFromDatabase({
     required String tableName,
   });
+  Future<void> deleteRowFromDatabase({
+    required String tableName,
+    required String id,
+  });
 }

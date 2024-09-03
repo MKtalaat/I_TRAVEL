@@ -22,13 +22,13 @@ class ProductDetailsViewBody extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(left: AppConstants.size15h, top: 33.h),
-            child: CircleAvatar(
-              backgroundColor: Colors.black.withOpacity(0.25),
-              radius: AppConstants.radius20r,
-              child: InkWell(
-                onTap: (){
-                    Navigator.pop(context);
-                },
+            child: InkWell(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              child: CircleAvatar(
+                backgroundColor: Colors.black.withOpacity(0.25),
+                radius: AppConstants.radius20r,
                 child: Icon(
                   IconBroken.Arrow___Left_2,
                   color: Colors.white,

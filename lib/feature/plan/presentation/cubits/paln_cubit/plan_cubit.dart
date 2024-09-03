@@ -17,11 +17,12 @@ class PlanCubit extends Cubit<PlanState> {
   }) async {
     emit(AddPlanLoadingState());
     Either<Failure, String> result = await planRepository.addPlan(
-   planModel: planModel,
+      planModel: planModel,
     );
     result.fold((failure) {
       emit(AddPlanFailureState(failure.error));
-    }, (message) {
+    }, (message) async{
+      await getPlan();
       emit(AddPlanSuccessState(message));
     });
   }
@@ -36,6 +37,21 @@ class PlanCubit extends Cubit<PlanState> {
     }, (plan) {
       this.plan = plan;
       emit(GetPlanSuccessState(plan));
+    });
+  }
+
+  Future<void> deletePlan({
+    required String id,
+  }) async {
+    emit(DeletePlanLoadingState());
+    Either<Failure, String> result = await planRepository.deletePlan(
+      id: id,
+    );
+    result.fold((failure) {
+      emit(DeletePlanFailureState(failure.error));
+    }, (message) async{
+     await getPlan();
+      emit(DeletePlanSuccessState(message));
     });
   }
 }

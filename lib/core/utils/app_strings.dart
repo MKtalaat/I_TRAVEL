@@ -8,6 +8,7 @@ class AppStrings {
   static const String didYouForgetYourPassword =
       'Did you forget your password?';
   static const String resetPassword = 'Reset password';
+  static const String delete = 'Delete';
   static const String update = 'Update';
   static const String updateProfile = 'Update Profile';
   static const String updateProfilePicture = 'Update Profile Picture';

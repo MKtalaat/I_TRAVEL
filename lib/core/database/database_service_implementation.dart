@@ -47,11 +47,27 @@ class DatabaseServiceImplementation extends DatabaseService {
     required String tableName,
     required Map<String, dynamic> values,
   }) async {
-  await  _database!.insert(tableName, values);
+    await _database!.insert(tableName, values);
   }
 
   @override
-  Future<List<Map<String,dynamic>>>  getTableFromDatabase({required String tableName}) async{
-   return await _database!.query(tableName);
+  Future<List<Map<String, dynamic>>> getTableFromDatabase({
+    required String tableName,
+  }) async {
+    return await _database!.query(tableName);
+  }
+
+  @override
+  Future<void> deleteRowFromDatabase({
+    required String tableName,
+    required String id,
+  }) async {
+    await _database!.delete(
+      tableName,
+      where: 'id = ?',
+      whereArgs: [
+        id,
+      ],
+    );
   }
 }

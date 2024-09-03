@@ -9,6 +9,8 @@ abstract class PlanRepository{
     required PlanModel planModel,
 });
   Future<Either<Failure,List<PlanModel>>>getPlan();
-
+  Future<Either<Failure,String>>deletePlan({
+    required String id,
+  });
 
 }
